@@ -33,22 +33,26 @@ def status(**kwargs):
             time = value
         elif 'space' in key:
             space = value
-    message = _format(color_code, stat_msg, string)
+    message = _format(color_code, stat_msg, string, space)
     if time:
-        message += '('+strftime("%Y-%m-%d %H:%M:%S", gmtime())+')'
+        stat_msg += '[' + strftime("%Y-%m-%d/%H:%M:%S", gmtime()) + ']'
+        message = _format(color_code, stat_msg, string, space)
     if prn_out:
         print(message)
     return message
 
 
-def _format(color_code, stat_msg, string):
+def _format(color_code, stat_msg, string, space):
     color_code = color.get(color_code)
+    i = 30
     if not color_code:
         color_code = color.get('yellow')
         error_msg = ('Incorrect color option! A list of options are as follows: '
           + ', '.join(value + key + reset for key, value in color.items()))
-        print(color_code + '[PRTTYERR]'.ljust(10) + '| ' + reset + error_msg)
-    return color_code + stat_msg.ljust(10) + '| ' + reset + string
+        print(color_code + '[PRTTYERR]'.ljust(i) + '| ' + reset + error_msg)
+    if not space:
+        i = 10
+    return color_code + stat_msg.ljust(i) + '| ' + reset + string
 
 error = partial(status, string='An error has ocurred!', color_code='red', stat_msg='[ERROR]', prn_out=True, time=False, space=False)
 warning = partial(status, string='Something is not right', color_code='yellow', stat_msg='[WARNING]', prn_out=True, time=False, space=False)
