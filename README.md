@@ -16,8 +16,10 @@ prettyoutput.info('Well, isn\'t this neat?')
 prettyoutput.success('Yes! Yes it is.')
 prettyoutput.error('Oh noes!')
 prettyoutput.warning('Get outta here!')
+custom_message = prettyoutput.custom(string='Oh noes!', color_code='cyan', stat_msg='[MSG]', prn_out=False)
+print(custom_message)
 ```
-
+Notice how we created a custom message and stored the value to a variable? PrettyOutput allows you to circumvent implicitely printing your message so that you can do it yourself when you're ready.
 ### PrettyOutput also supports printing without args!
 ```py
 import prettyoutput
