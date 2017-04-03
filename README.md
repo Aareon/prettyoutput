@@ -36,6 +36,7 @@ import prettyoutput
 
 prettyoutput.error(time=True)
 ```
+`[ERROR]   | An error has occured!(2017-04-03 00:46:02)`
 
 
 ### Python interpreter acting funny?
