@@ -19,7 +19,20 @@ color = {'red': '\033[0;31;40m',
 reset = color.get('reset')
 
 
-def status(string, color_code, stat_msg, prn_out: bool=True, time: bool=False):
+def status(**kwargs):
+    for key, value in kwargs.items():
+        if 'string' in key:
+            string = value
+        elif 'color_code' in key:
+            color_code = value
+        elif 'stat_msg' in key:
+            stat_msg = value
+        elif 'prn_out' in key:
+            prn_out = value
+        elif 'time' in key:
+            time = value
+        elif 'space' in key:
+            space = value
     message = _format(color_code, stat_msg, string)
     if time:
         message += '('+strftime("%Y-%m-%d %H:%M:%S", gmtime())+')'
@@ -37,11 +50,11 @@ def _format(color_code, stat_msg, string):
         print(color_code + '[PRTTYERR]'.ljust(10) + '| ' + reset + error_msg)
     return color_code + stat_msg.ljust(10) + '| ' + reset + string
 
-error = partial(status, string='An error has occured!', color_code='red', stat_msg='[ERROR]', prn_out=True, time=False)
-warning = partial(status, string='Something is not right.', color_code='yellow', stat_msg='[WARNING]', prn_out=True, time=False)
-success = partial(status, string='Great success!', color_code='green', stat_msg='[SUCCESS]', prn_out=True, time=False)
-info = partial(status, string='Information:', color_code='cyan', stat_msg='[INFO]', prn_out=True, time=False)
-custom = partial(status, string='Custom text', color_code='magenta', stat_msg='[CUSTOM]', prn_out=True, time=False)
+error = partial(status, string='An error has ocurred!', color_code='red', stat_msg='[ERROR]', prn_out=True, time=False, space=False)
+warning = partial(status, string='Something is not right', color_code='yellow', stat_msg='[WARNING]', prn_out=True, time=False, space=False)
+success = partial(status, string='Great success!', color_code='green', stat_msg='[SUCCESS]', prn_out=True, time=False, space=False)
+info = partial(status, string='Information:', color_code='cyan', stat_msg='[INFO]', prn_out=True, time=False, space=False)
+custom = partial(status, string='Custom text', color_code='magenta', stat_msg='[CUSTOM]', prn_out=True, time=False, space=False)
 
 
 def color_this(string, color_code):
@@ -67,3 +80,4 @@ def version(color_code='magenta', stat_msg='[PRTTYOUT]', string='Pretty Output v
 
     status(string, color_code, stat_msg, prn_out)
     extend(('Python Version - ' + pyver, 'PreOut Version - ' + outver))
+
