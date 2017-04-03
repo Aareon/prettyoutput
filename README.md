@@ -1,7 +1,7 @@
 [![N|Solid](https://www.python.org/static/community_logos/python-powered-w-100x40.png)](https://www.python.org/)
 PrettyOutput allows you to print pretty colors with ease. What more do you want?
 
-### Usage
+# Usage
 ```py
 import prettyoutput
 
@@ -11,7 +11,7 @@ prettyoutput.error('Oh noes!')
 prettyoutput.warning('Get outta here!')
 ```
 
-# PrettyOutput also supports printing without args!
+### PrettyOutput also supports printing without args!
 ```py
 import prettyoutput
 
@@ -20,17 +20,16 @@ prettyoutput.success()
 prettyoutput.error()
 prettyoutput.warning()
 ```
-
 Notice when executed, everything is aligned perfectly!
 
-# Got the time? We do!
+### Got the time? We do!
 ```py
 import prettyoutput
 
 prettyoutput.error(time=True)
 ```
 
-# Python interpreter acting funny?
+### Python interpreter acting funny?
 ```py
 >>> import prettyoutput
 >>> prettyoutput.error()
@@ -38,7 +37,7 @@ prettyoutput.error(time=True)
 '\x1b[0;31;40m[ERROR]   | \x1b[1;37;40mAn error has occured!'
 >>>
 ```
-# Try this;
+### Try this;
 ```py
 >>> import prettyoutput
 >>> print(prettyoutput.error(prn_out=False))
