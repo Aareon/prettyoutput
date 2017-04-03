@@ -30,6 +30,24 @@ import prettyoutput
 prettyoutput.error(time=True)
 ```
 
+# Python interpreter acting funny?
+```py
+>>> import prettyoutput
+>>> prettyoutput.error()
+[ERROR]   | An error has occured!
+'\x1b[0;31;40m[ERROR]   | \x1b[1;37;40mAn error has occured!'
+>>>
+```
+# Try this;
+```py
+>>> import prettyoutput
+>>> print(prettyoutput.error(prn_out=False))
+[ERROR]   | An error has occured!```
+```
+> PrettyOutput returns the message created so that it may be re-used.
+> Save the returned string to a variable, and you may never have to call
+> PrettyOutput again!
+
 License
 ----
 
