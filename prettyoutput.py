@@ -19,20 +19,7 @@ color = {'red': '\033[0;31;40m',
 reset = color.get('reset')
 
 
-def status(**kwargs):
-    for key, value in kwargs.items():
-        if 'string' in key:
-            string = value
-        elif 'color_code' in key:
-            color_code = value
-        elif 'stat_msg' in key:
-            stat_msg = value
-        elif 'prn_out' in key:
-            prn_out = value
-        elif 'time' in key:
-            time = value
-        elif 'space' in key:
-            space = value
+def status(string, color_code, stat_msg, prn_out, time, space):
     message = _format(color_code, stat_msg, string, space)
     if time:
         stat_msg += '[' + strftime("%Y-%m-%d/%H:%M:%S", gmtime()) + ']'
