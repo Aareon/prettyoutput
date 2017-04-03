@@ -1,5 +1,3 @@
-![alt text][logo]
-
 [![N|Solid](https://www.python.org/static/community_logos/python-powered-w-100x40.png)](https://www.python.org/)
 PrettyOutput allows you to print pretty colors with ease. What more do you want?
 
@@ -31,3 +29,8 @@ import prettyoutput
 
 prettyoutput.error(time=True)
 ```
+
+License
+----
+
+[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/Aareon/Tipsy/blob/master/LICENSE)
