@@ -5,7 +5,7 @@ PrettyOutput allows you to print pretty colors with ease. What more do you want?
 ```py
 import prettyoutput
 
-prettyoutput.info('Well, isn't this neat?')
+prettyoutput.info('Well, isn\'t this neat?')
 prettyoutput.success('Yes! Yes it is.')
 prettyoutput.error('Oh noes!')
 prettyoutput.warning('Get outta here!')
