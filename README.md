@@ -4,9 +4,7 @@ PrettyOutput allows you to print pretty colors with ease. What more do you want?
 ## Installation
 Options:
 1. Clone this repository (you probably know what you're doing)
-2. `pip install prettyoutput` (for the everyday pleb)
-   * Alternatively, you can use `py(thon)3 -m pip install prettyoutput`
-3. Download the archive from releases
+2. Download the archive from releases
 
 # Usage
 ```py
