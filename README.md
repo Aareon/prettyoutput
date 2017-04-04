@@ -46,9 +46,10 @@ import prettyoutput
 prettyoutput.error(time=True, space=True)
 prettyoutput.info(time=False, space=True)
 ```
-```py
+```
 [ERROR][2017-04-04/00:10:52]  | An error has ocurred!
-[INFO]                        | Information:```
+[INFO]                        | Information:
+```
 
 ### Python interpreter acting funny?
 You're probably seeing a really confusing string of characters, right?
