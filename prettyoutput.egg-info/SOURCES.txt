@@ -1,6 +1,0 @@
-README
-setup.py
-prettyoutput.egg-info/PKG-INFO
-prettyoutput.egg-info/SOURCES.txt
-prettyoutput.egg-info/dependency_links.txt
-prettyoutput.egg-info/top_level.txt
