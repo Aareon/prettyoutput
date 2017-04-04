@@ -37,8 +37,18 @@ import prettyoutput
 
 prettyoutput.error(time=True)
 ```
-`[ERROR]   | An error has occured!(2017-04-03 00:46:02)`
+`[ERROR][2017-04-03/23:58:22]  | An error has ocurred!`
+>Find yourself using `time` a lot? You should use `space` for all statuses, as well. This will automatically align
+>all statuses so that `time` doesn't throw off the flow of your output!
+```py
+import prettyoutput
 
+prettyoutput.error(time=True, space=True)
+prettyoutput.info(time=False, space=True)
+```
+```py
+[ERROR][2017-04-04/00:10:52]  | An error has ocurred!
+[INFO]                        | Information:```
 
 ### Python interpreter acting funny?
 You're probably seeing a really confusing string of characters, right?
