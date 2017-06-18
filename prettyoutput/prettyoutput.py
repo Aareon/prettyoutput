@@ -7,13 +7,13 @@ Pretty Output
 Aareon Sullivan - 2017
 """
 
-color = {'red': '\033[0;31;40m',
-         'yellow': '\033[1;33;40m',
-         'green': '\033[1;32;40m',
-         'cyan': '\033[1;36;40m',
-         'magenta': '\033[1;35;40m',
-         'black': '\033[1;30;40m',
-         'reset': '\033[1;37;40m'}
+color = {'red': '\033[31m',
+         'yellow': '\033[33m',
+         'green': '\033[32m',
+         'cyan': '\033[36m',
+         'magenta': '\033[35m',
+         'black': '\033[30m',
+         'reset': '\033[37m'}
 
 reset = color.get('reset')
 
